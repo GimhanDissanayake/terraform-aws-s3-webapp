@@ -1,5 +1,9 @@
 provider "aws" {
   region = var.region
+
+  tags = {
+    reason = "aws-test-module"
+  }
 }
 
 resource "aws_s3_bucket" "bucket" {
